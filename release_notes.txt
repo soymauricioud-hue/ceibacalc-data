@@ -1,0 +1,22 @@
+CeibaCalc v1.0.0 - Release Notes
+===================================
+
+Fecha de Lanzamiento: 2025-11-14
+
+Esta es la primera versión de CeibaCalc, una calculadora clínica veterinaria profesional.
+
+Características Principales:
+---------------------------
+- Módulo de Fluidoterapia: Calcula déficit, mantenimiento y pérdidas GI. Incluye herramientas para preparar soluciones glucosadas con alertas de seguridad.
+- Módulo de CRI y Analgesia: Calcula bolos y tasas de infusión continua para los fármacos especificados en `farmacos.json`. Respeta las unidades y concentraciones exactas del archivo.
+- Generación de PDF: Crea informes clínicos detallados con los datos del paciente, todos los pasos de cálculo y alertas.
+- PWA (Progressive Web App): La aplicación es instalable y funciona offline.
+- Aplicación de Escritorio: Incluye una versión de escritorio para Windows generada con Electron.
+
+Instrucciones de Instalación (Desde el ZIP):
+--------------------------------------------
+1. Asegúrese de tener Node.js instalado (descargar desde https://nodejs.org/).
+2. Descomprima el archivo `CeibaCalc-Source.zip`.
+3. Haga doble clic en el archivo `build_and_pack.bat`.
+4. El script instalará las dependencias y creará el instalador `CeibaCalc-Setup-1.0.0.exe` en la carpeta `dist`.
+5. Ejecute el instalador para instalar CeibaCalc en su sistema.
