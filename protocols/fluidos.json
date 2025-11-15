@@ -1,0 +1,36 @@
+{
+  "maintenance": {
+    "dog": {
+      "min": 60,
+      "max": 70,
+      "unit": "ml/kg/day",
+      "note": "AAHA/WSAVA default"
+    },
+    "cat": {
+      "min": 40,
+      "max": 60,
+      "unit": "ml/kg/day",
+      "note": "AAHA/WSAVA default"
+    }
+  },
+  "deficit_formula": "deficit_ml = peso_kg * (deshidratation_percent/100) * 1000",
+  "gi_losses": {
+    "vomit": {
+      "min_ml_per_kg": 2,
+      "max_ml_per_kg": 5
+    },
+    "diarrhea": {
+      "min_ml_per_kg": 5,
+      "max_ml_per_kg": 10
+    }
+  },
+  "initial_correction_pct": {
+    "min": 30,
+    "max": 50
+  },
+  "initial_hours": {
+    "min": 4,
+    "max": 6
+  },
+  "notes": "Ajustar en pacientes renales o cardiacos. Valores de ejemplo basados en WSAVA/AAHA."
+}
