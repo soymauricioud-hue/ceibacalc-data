@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CeibaCalc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>CeibaCalc</h1>
+
+        <!-- Patient Data -->
+        <div class="card">
+            <h2>Paciente</h2>
+            <div class="form-group">
+                <label for="patient-id">ID Paciente</label>
+                <input type="text" id="patient-id" placeholder="Nombre o ID">
+            </div>
+            <div class="form-group">
+                <label for="patient-weight">Peso (kg)</label>
+                <input type="number" id="patient-weight" placeholder="Ej: 15.5">
+            </div>
+            <div class="form-group">
+                <label for="patient-species">Especie</label>
+                <select id="patient-species">
+                    <option value="dog">Perro</option>
+                    <option value="cat">Gato</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Fluidoterapia Module -->
+        <div class="card">
+            <h2>Módulo de Fluidoterapia</h2>
+            <div class="form-group">
+                <label for="dehydration-percent">% Deshidratación</label>
+                <input type="number" id="dehydration-percent" placeholder="Ej: 8">
+            </div>
+             <div class="form-group-checkbox">
+                <label><input type="checkbox" id="vomito-check"> Pérdidas GI: Vómito</label>
+                <label><input type="checkbox" id="diarrea-check"> Pérdidas GI: Diarrea</label>
+            </div>
+            <button id="calculate-fluids-btn" class="btn-calculate">Calcular Fluidos</button>
+            <div id="fluid-results" class="results"></div>
+        </div>
+
+        <!-- Glucosado Module -->
+        <div class="card">
+            <h2>Preparación de Solución Glucosada</h2>
+            <div class="form-group">
+                <label for="dextrose-start-conc">Conc. Dextrosa Partida (%)</label>
+                <input type="number" id="dextrose-start-conc" value="50">
+            </div>
+            <div class="form-group">
+                <label for="dextrose-final-volume">Volumen Final Deseado (ml)</label>
+                <input type="number" id="dextrose-final-volume" placeholder="Ej: 500">
+            </div>
+            <div class="form-group">
+                <label for="dextrose-final-conc">Conc. Final Deseada (%)</label>
+                <input type="number" id="dextrose-final-conc" placeholder="Ej: 5">
+            </div>
+            <button id="calculate-dextrose-btn" class="btn-calculate">Calcular Dextrosa</button>
+            <div id="dextrose-results" class="results"></div>
+        </div>
+
+
+        <!-- CRI Module -->
+        <div class="card">
+            <h2>Módulo de CRI y Analgesia</h2>
+            <div class="form-group">
+                <label for="drug-select">Fármaco</label>
+                <select id="drug-select"></select>
+            </div>
+            <div class="form-group">
+                <label for="cri-dose">Dosis CRI</label>
+                <input type="number" id="cri-dose" placeholder="Dosis ej: 5">
+                <span id="cri-unit-label"></span>
+            </div>
+            <button id="calculate-cri-btn" class="btn-calculate">Calcular Bolo y CRI</button>
+            <div id="cri-results" class="results"></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="card">
+            <h2>Acciones</h2>
+            <button id="generate-pdf-btn" class="btn-main">Generar PDF Clínico</button>
+        </div>
+
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
